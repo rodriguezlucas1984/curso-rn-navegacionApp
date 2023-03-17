@@ -2,6 +2,7 @@ import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import {StackScreenProps} from '@react-navigation/stack';
 import {styles} from '../theme/appTheme';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Pagina1Screen = ({navigation}: StackScreenProps<any, any>) => {
   return (
@@ -27,6 +28,7 @@ const Pagina1Screen = ({navigation}: StackScreenProps<any, any>) => {
               nombre: 'Pedro',
             })
           }>
+          <Icon name="body-outline" color="#FFF" size={35} />
           <Text style={styles.botonGrandeTexto}>Pedro</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -37,6 +39,7 @@ const Pagina1Screen = ({navigation}: StackScreenProps<any, any>) => {
               nombre: 'Maria',
             })
           }>
+          <Icon name="woman-outline" color="#FFF" size={35} />
           <Text style={styles.botonGrandeTexto}>Maria</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -47,6 +50,7 @@ const Pagina1Screen = ({navigation}: StackScreenProps<any, any>) => {
               nombre: 'Luis',
             })
           }>
+          <Icon name="body-outline" color="#FFF" size={35} />
           <Text style={styles.botonGrandeTexto}>Luis</Text>
         </TouchableOpacity>
       </View>

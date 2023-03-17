@@ -3,9 +3,10 @@ import {useWindowDimensions} from 'react-native';
 
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
-import {StackNavigator} from './StackNavigator';
 import {SettingsScreen} from '../screens/SettingsScreen';
 import {MenuInterno} from '../components/MenuInterno';
+import {Tabs} from './Tabs';
+import {colors} from '../theme/appTheme';
 
 const Drawer = createDrawerNavigator();
 
@@ -15,16 +16,18 @@ export const MenuLateral = () => {
     <Drawer.Navigator
       screenOptions={{
         drawerType: dimensions.width >= 768 ? 'permanent' : 'front',
+        headerTintColor: colors.primary,
+        title: '',
       }}
       drawerContent={props => <MenuInterno {...props} />}>
       <Drawer.Screen
-        name="StackNavigator"
+        name="Tabs"
         options={{
           headerStyle: {
             height: 35,
           },
         }}
-        component={StackNavigator}
+        component={Tabs}
       />
       <Drawer.Screen
         name="SettingsScreen"

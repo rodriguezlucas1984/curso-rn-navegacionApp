@@ -1,12 +1,13 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, Platform} from 'react-native';
 
 import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
 
-import {styles} from '../theme/appTheme';
+import {colors, styles} from '../theme/appTheme';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export const MenuInterno = ({navigation}: DrawerContentComponentProps) => {
   return (
@@ -24,14 +25,16 @@ export const MenuInterno = ({navigation}: DrawerContentComponentProps) => {
       {/* Opciones de menú */}
       <View style={styles.menuContainer}>
         <TouchableOpacity
-          style={styles.menuBoton}
+          style={{...styles.menuBoton, flexDirection: 'row'}}
           onPress={() => navigation.navigate('StackNavigator')}>
-          <Text style={styles.menuTexto}>Navegacion</Text>
+          <Icon name="compass-outline" size={23} color="#000" />
+          <Text style={styles.menuTexto}> Navegacion</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.menuBoton}
+          style={{...styles.menuBoton, flexDirection: 'row'}}
           onPress={() => navigation.navigate('SettingsScreen')}>
-          <Text style={styles.menuTexto}>Settings</Text>
+          <Icon name="cog-outline" size={23} color="#000" />
+          <Text style={styles.menuTexto}> Settings</Text>
         </TouchableOpacity>
       </View>
     </DrawerContentScrollView>
