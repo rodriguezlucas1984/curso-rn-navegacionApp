@@ -1,5 +1,6 @@
 # NavegacionApp
-Una aplicación de React Native que implementa los sigueintes tipos de navegación: Stack, Drawer,Tabs y TopTabs.
+Una aplicación de React Native que implementa los siguientes tipos de navegación: Stack, Drawer,Tabs y TopTabs.
+Ademas comunica elementos y mantiene un estado global utilizando React Context API.
 
 Esta app es la tercera aplicación desarrollada en el curso [React Native: Aplicaciones nativas para IOS y Android](https://www.udemy.com/course/react-native-fh/)
 

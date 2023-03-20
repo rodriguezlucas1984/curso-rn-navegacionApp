@@ -1,7 +1,8 @@
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React, {useEffect} from 'react';
-import {styles} from '../theme/appTheme';
 import {StackScreenProps} from '@react-navigation/stack';
+
+import {styles} from '../theme/appTheme';
 
 const Pagina2Screen = ({navigation}: StackScreenProps<any, any>) => {
   useEffect(() => {

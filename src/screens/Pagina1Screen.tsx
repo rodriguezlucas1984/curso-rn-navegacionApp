@@ -1,8 +1,9 @@
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import {StackScreenProps} from '@react-navigation/stack';
-import {styles} from '../theme/appTheme';
 import Icon from 'react-native-vector-icons/Ionicons';
+
+import {styles} from '../theme/appTheme';
 
 const Pagina1Screen = ({navigation}: StackScreenProps<any, any>) => {
   return (

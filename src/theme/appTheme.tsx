@@ -94,4 +94,25 @@ export const styles = StyleSheet.create({
   menuTexto: {
     fontSize: 20,
   },
+  botonSingIn: {
+    borderRadius: 10,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '30%',
+    padding: 5,
+    backgroundColor: '#149D67',
+  },
+  botonLogout: {
+    borderRadius: 10,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '30%',
+    padding: 5,
+    backgroundColor: '#F00',
+  },
+  textoBotonLog: {
+    fontSize: 18,
+    textAlign: 'center',
+    color: '#FFF',
+  },
 });

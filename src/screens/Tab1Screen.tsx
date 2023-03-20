@@ -1,12 +1,15 @@
 import {View, Text} from 'react-native';
-import React, {useEffect} from 'react';
-import {colors, styles} from '../theme/appTheme';
-
-import Icon from 'react-native-vector-icons/Ionicons';
+import React, {useContext, useEffect} from 'react';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+
+import TouchableIcon from '../components/TouchableIcon';
+import {AuthContext} from '../context/AuthContext';
+import {styles} from '../theme/appTheme';
 
 export const Tab1Screen = () => {
   const {top} = useSafeAreaInsets();
+
+  const {changeFavoriteIcon} = useContext(AuthContext);
 
   useEffect(() => {
     console.log('Tab1Screen effect ');
@@ -16,16 +19,36 @@ export const Tab1Screen = () => {
     <View style={{...styles.globalMargin, marginTop: top}}>
       <Text style={styles.title}>Iconos</Text>
       <Text>
-        <Icon name="airplane-outline" size={70} color={colors.primary} />
-        <Icon name="attach-outline" size={70} color={colors.primary} />
-        <Icon name="bonfire-outline" size={70} color={colors.primary} />
-        <Icon
-          name="chatbubble-ellipses-outline"
-          size={70}
-          color={colors.primary}
+        <TouchableIcon
+          iconName="airplane-outline"
+          iconSize={70}
+          onClick={() => changeFavoriteIcon('airplane-outline')}
         />
-        <Icon name="images-outline" size={70} color={colors.primary} />
-        <Icon name="leaf-outline" size={70} color={colors.primary} />
+        <TouchableIcon
+          iconName="attach-outline"
+          iconSize={70}
+          onClick={() => changeFavoriteIcon('attach-outline')}
+        />
+        <TouchableIcon
+          iconName="bonfire-outline"
+          iconSize={70}
+          onClick={() => changeFavoriteIcon('bonfire-outline')}
+        />
+        <TouchableIcon
+          iconName="chatbubble-ellipses-outline"
+          iconSize={70}
+          onClick={() => changeFavoriteIcon('chatbubble-ellipses-outline')}
+        />
+        <TouchableIcon
+          iconName="images-outline"
+          iconSize={70}
+          onClick={() => changeFavoriteIcon('images-outline')}
+        />
+        <TouchableIcon
+          iconName="leaf-outline"
+          iconSize={70}
+          onClick={() => changeFavoriteIcon('leaf-outline')}
+        />
       </Text>
     </View>
   );
